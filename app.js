@@ -4,9 +4,10 @@ const fs = require("fs");
 
 let pathInput = process.argv[2];
 let width = Number(process.argv[3]);
+let angle = parseInt(process.argv[4]);
 
 const resize = (pathInput, pathOutput, width) => {
-    sharp(pathInput).resize({ width: width })
+    sharp(pathInput).rotate(angle, { background: "#053447" }).resize({ width: width })
         .toFile(pathOutput, (err) => {
             if (err) {
                 console.log(err);
