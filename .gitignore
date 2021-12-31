@@ -1,3 +1,2 @@
 node_modules/
-temp/image_resize.jpg
-compressed
+package-lock.json
